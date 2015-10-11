@@ -1,0 +1,25 @@
+.btn {
+    width: 150px;
+    height: 50px;
+}
+
+.row {
+    margin-top: 50px;
+}
+
+.form-control {
+    width: 400px;
+}
+
+.panel-default {
+    width: 500px;
+}
+
+#inlineInput input {
+    display: inline;
+    width: 194px;
+}
+
+textarea {
+    resize: none;
+}

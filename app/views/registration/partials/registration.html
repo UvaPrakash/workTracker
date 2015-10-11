@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../public/assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../../public/assets/css/style.css" type="text/css">
+
+    <!-- Angular JS 1.4.7 -->
+    <script src="../../../../public/assets/js/angular.min.js"></script>
+    <script src="../../../../public/assets/js/ngStorage.min.js"></script>
+    <script src="../../../../public/assets/js/script.js"></script>
+    <script src="../../../controllers/registrationController.js"></script>
+    <script src="../../../services/registrationService.js"></script>
+</head>
+
+<body>
+    <div class="row" ng-app="registrationApp">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <center>
+                        <h3>Registration</h3></center>
+                </div>
+                <div class="panel-body" ng-controller="registrationController">
+                    <form name="registrationForm" ng-submit="submit()">
+                        <center>
+                            <div id="inlineInput">
+                                <input type="text" name="firstName" required="required" placeholder="First Name" class="form-control" ng-model="registration_data.firstName" autofocus>
+                                <input type="text" name="lastName" required="required" placeholder="Last Name" class="form-control" ng-model="registration_data.lastName">
+                                <br>
+                            </div>
+                            <br>
+                            <input type="text" name="email" required="required" placeholder="Email Address" class="form-control" ng-model="registration_data.email">
+                            <br>
+                            <input type="password" name="password1" required="required" placeholder="Choose a password" class="form-control" ng-model="registration_data.password1">
+                            <br>
+                            <input type="password" name="password2" required="required" placeholder="Confirm password" class="form-control" ng-model="registration_data.password2">
+                            <br>
+                            <br>
+                            <button type="submit" class="btn btn-lg btn-primary btn-block" ng-click="save()">Sign Up</button>
+                            <br>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"> </div>
+    </div>
+</body>
+
+</html>

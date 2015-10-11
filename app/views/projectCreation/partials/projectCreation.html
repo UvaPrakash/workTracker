@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project Creation</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../../public/assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../../../../public/assets/css/style.css" type="text/css">
+
+    <!-- Angular JS 1.4.7 -->
+    <script src="../../../../public/assets/js/angular.min.js"></script>
+    <script src="../../../../public/assets/js/script.js"></script>
+    <script src="../../../controllers/projectCreationController.js"></script>
+    <script src="../../../services/projectCreationService.js"></script>
+</head>
+
+<body>
+    <div class="row" ng-app="projectCreationApp">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <center>
+                        <h3>Project Creation</h3></center>
+                </div>
+                <div class="panel-body" ng-controller="projectCreationController">
+                    <form name="projectCreation" ng-submit="submit()">
+                        <center>
+                            <input type="text" name="projName" required="required" placeholder="Project Name" class="form-control" ng-model="projectCreation_data.projName">
+                            <br>
+                            <textarea class="form-control" rows="5" placeholder="Project Description" name="projDescription" ng-model="projectCreation_data.projDescription"></textarea>
+                            <br>
+                            <input type="text" name="projType" required="required" placeholder="Project Type" class="form-control" ng-model="projectCreation_data.projType">
+                            <br>
+
+                            <button type="submit" class="btn btn-lg btn-primary btn-block">Create Project</button>
+                            <br>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3"> </div>
+    </div>
+</body>
+
+</html>
