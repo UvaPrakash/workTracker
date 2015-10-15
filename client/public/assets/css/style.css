@@ -23,3 +23,8 @@
 textarea {
     resize: none;
 }
+
+.login-page
+{
+    background-color: #d35400 !important;
+}
