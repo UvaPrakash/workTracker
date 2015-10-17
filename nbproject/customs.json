@@ -1,1 +1,10 @@
-{"elements":{},"attributes":{"ui-view":{"context":"div"}}}
+{
+    "elements": {
+        "registration": {}
+    },
+    "attributes": {
+        "ui-view": {
+            "context": "div"
+        }
+    }
+}
