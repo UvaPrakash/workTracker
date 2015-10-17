@@ -1,21 +1,18 @@
- <div class="main" ng-controller="userController"> 
-     <div class=row> 
-         <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4"> 
-             
-             <form role=form ng-submit=loginSubmit()> 
-                 <div class=form-content> 
-                     <div class=form-group> 
-                         <input type="email" class="form-control input-underline input-lg" placeholder="Enter Email"> 
-                     </div> 
-                     <div class=form-group> 
-                         <input type="password" class="form-control input-underline input-lg" placeholder="Enter Password"> 
-                     </div> 
-                 </div> 
-                 <button type=submit class="btn btn-white btn-outline btn-lg btn-rounded">Login</button> 
-             </form> 
-             
-         </div> 
-     </div> 
- </div>
+<div class="main" ng-controller="userController">
+    <div class=row>
+        <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4">
 
-
+            <form role=form ng-submit=loginSubmit()>
+                <div class=form-content>
+                    <div class=form-group>
+                        <input type="email" name="email" class="form-control input-underline input-lg" placeholder="Enter Email" ng-model="login_data.email">
+                    </div>
+                    <div class=form-group>
+                        <input type="password" name="password" class="form-control input-underline input-lg" placeholder="Enter Password" ng-model="login_data.password">
+                    </div>
+                </div>
+                <button type=submit class="btn btn-white btn-outline btn-lg btn-rounded">Login</button>
+            </form>
+        </div>
+    </div>
+</div>

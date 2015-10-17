@@ -1,16 +1,33 @@
-(function(){
+(function () {
 
-    app.factory('userService',['$q','$http',userService]);
-    
-    function userService($q,$http)
-    {
-        return{
-            userRegistration  : userRegistration
+    app.factory('userService', ['$q', '$http', userService]);
+
+    function userService($q, $http) {
+        return {
+            userRegistration: userRegistration,
+            userLogin: userLogin
+
         }
-        
-        function userRegistration()
-        {
-            return $http({method: 'POST',url:HOST+USER_REGISTRATION}).then(function(response){return response.data;});
+
+        function userLogin(data) {
+            return $http({
+                method: 'POST',
+                data: data,
+                url: HOST + USER_REGISTRATION
+            }).then(function (response) {
+                return response.data;
+            });
         }
+
+        function userRegistration(data) {
+            return $http({
+                method: 'POST',
+                data: data,
+                url: HOST + USER_REGISTRATION
+            }).then(function (response) {
+                return response.data;
+            });
+        }
+
     }
 }());
