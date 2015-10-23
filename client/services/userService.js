@@ -13,7 +13,7 @@
             return $http({
                 method: 'POST',
                 data: data,
-                url: HOST + USER_REGISTRATION
+                url: HOST + USER_LOGIN,
             }).then(function (response) {
                 return response.data;
             });

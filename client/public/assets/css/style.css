@@ -40,3 +40,10 @@ textarea {
 button:focus {
     outline: 0 !important;
 }
+
+.error_message
+{
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}

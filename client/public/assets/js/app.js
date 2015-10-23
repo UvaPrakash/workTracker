@@ -3,11 +3,12 @@
 var app = angular.module("trackerapp", ['ui.router', 'ngAnimate', 'ngTouch']);
 
 app.config(["$stateProvider", "$urlRouterProvider", function (stateProvider, urlRouterProvider) {
-    urlRouterProvider
-        .when('/dashboard', '/dashboard/createproject'),
+        urlRouterProvider
+        .when('/dashboard', '/dashboard/home'),
 
         urlRouterProvider
         .otherwise('/login'),
+
         stateProvider
         .state("base", {
             "abstract": !0,
@@ -30,6 +31,12 @@ app.config(["$stateProvider", "$urlRouterProvider", function (stateProvider, url
             url: "/dashboard",
             templateUrl: "client/views/dashboard.html",
             parent: "base",
+            controller: 'dashboardController'
+        })
+        .state("home", {
+            url: "/home",
+            templateUrl: "client/views/dashboard/dashboardhome.html",
+            parent: "dashboard",
             controller: 'dashboardController'
         });
 }]);

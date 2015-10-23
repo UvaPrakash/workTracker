@@ -11,6 +11,11 @@
 |
 */
 
+Event::listen('illuminate.query', function($query)
+{
+    //var_dump($query);
+});
+
 Route::get('/', 'WelcomeController@index');
 
 Route::get('home', 'HomeController@index');
@@ -21,4 +26,7 @@ Route::controllers([
 ]);
 
 
-Route::resource('user', 'UserController');
+Route::group(['prefix' => 'webapi'], function () {
+    Route::post('user/login', 'UserController@login');
+    Route::resource('user', 'UserController');
+});

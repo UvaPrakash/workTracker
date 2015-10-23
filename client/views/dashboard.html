@@ -1,10 +1,12 @@
-<div class=dashboard-page ng-controller="dashboardController"> 
+<div class=dashboard-page ng-controller="dashboardController" ng-init="dashboardInitial()"> 
     <div class=container-fluid> 
         <div class=row> 
             <div class="col-sm-3 col-md-2 sidebar"> 
                 <div class=text-center> 
-                    <h2 class=brand>Ani Theme <small>Free Edition</small></h2> 
+                    
                     <img src=images/flat-avatar.png class=user-avatar><br> 
+                    <p>Welcome</p><br/>
+                    <p>{{user_prefix}}{{user_first_name}}</p>
                     <a ui-sref=login class="btn btn-white btn-outline btn-rounded btn-sm">Logout</a> 
                 </div> 
                 <ul class="nav nav-sidebar"> 
