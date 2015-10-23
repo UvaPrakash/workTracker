@@ -55,9 +55,9 @@ return [
 		'mysql' => [
 			'driver'    => 'mysql',
 			'host'      => env('DB_HOST', 'localhost'),
-			'database'  => env('DB_DATABASE', 'worktrackerapp'),
-			'username'  => env('DB_USERNAME', 'root'),
-			'password'  => env('DB_PASSWORD', ''),
+			'database'  => env('DB_DATABASE', 'ragav728_worktracker'),
+			'username'  => env('DB_USERNAME', 'ragav728_admin'),
+			'password'  => env('DB_PASSWORD', 'Ragav$12345'),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

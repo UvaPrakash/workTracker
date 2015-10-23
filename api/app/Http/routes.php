@@ -30,3 +30,8 @@ Route::group(['prefix' => 'webapi'], function () {
     Route::post('user/login', 'UserController@login');
     Route::resource('user', 'UserController');
 });
+
+Route::group(['prefix' => 'webapi'], function () {
+    Route::post('user/login', 'UserController@login');
+    Route::resource('user', 'UserController');
+});
