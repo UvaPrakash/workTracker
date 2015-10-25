@@ -5,7 +5,8 @@
     function userService($q, $http) {
         return {
             userRegistration: userRegistration,
-            userLogin: userLogin
+            userLogin: userLogin,
+            changePassword: changePassword
 
         }
 
@@ -24,6 +25,16 @@
                 method: 'POST',
                 data: data,
                 url: HOST + USER_REGISTRATION
+            }).then(function (response) {
+                return response.data;
+            });
+        }
+        
+        function changePassword(data) {
+            return $http({
+                method: 'POST',
+                data: data,
+                url: HOST + CHANGE_PASSWORD,
             }).then(function (response) {
                 return response.data;
             });

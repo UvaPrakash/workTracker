@@ -10,14 +10,29 @@
                 if(response.status === "Success")
                 {
                     window.localStorage.setItem("userDetails",JSON.stringify(response));
+                    $state.go('home');
                 }
                 else
                 {
                     $scope.errormessage = response.message;
                 }
-                $state.go('home');
             });
-
+        }
+        
+        //changePassword submit is handled here 
+        $scope.changePassword = function () {
+            var data = {"old_password":$scope.changepwd_data.oldPassword, "new_password":$scope.changepwd_data.newPassword, "re_password":$scope.changepwd_data.rePassword}
+            userService.changePassword(data).then(function (response) {
+                if(response.status === "Success")
+                {
+                    window.localStorage.setItem("userDetails",JSON.stringify(response));
+                    $state.go('login');
+                }
+                else
+                {
+                    $scope.errormessage = response.message;
+                }
+            });
         }
 
         //registration submit is handled here
@@ -30,4 +45,3 @@
     }
 
 }());
-

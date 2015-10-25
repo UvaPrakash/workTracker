@@ -102,12 +102,42 @@ class UserController extends Controller {
               
               if($result == null)
               {
-                  $response = array("status"=>"Failure","message"=>"Login Failure,Please check your credentials");
+                  $response = array("status"=>"Failure","message"=>"Login Failure, Please check your credentials");
               }
               else
               {
                   $response = array("status"=>"Success","data"=>$result);
               }
+            
+              return json_encode($response);
+        }
+        
+        public function changePassword(Request $request)
+        {
+              $user          =  new User();
+              $oldPassword   =  $request->old_password;
+              $newPassword   =  $request->new_password;
+              $rePassword    =  $request->re_password;
+              
+              if($newPassword === $rePassword)
+              {
+                  $result   =  $user->where('user_password',$oldPassword)->update(['user_password' => $newPassword]);
+                  
+                  if($result == null)
+                    {
+                        $response = array("status"=>"Failure","message"=>"Old password mismatch");
+                    }
+                  else
+                   {
+                       $response = array("status"=>"Success","data"=>$result);
+                   }
+              }
+              else
+              {
+                  $response = array("status"=>"Failure","message"=>"Check the new password");
+              }
+              
+              
             
               return json_encode($response);
         }

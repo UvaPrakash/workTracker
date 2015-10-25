@@ -13,11 +13,11 @@
                     
             if(response.data.user_gender === 1)
             {
-                $scope.user_prefix = "Mr.";
+                $scope.user_prefix = "Mr. ";
             }
             else
             {
-                $scope.user_prefix = "Mrs.";
+                $scope.user_prefix = "Mrs. ";
             }
         }
     }

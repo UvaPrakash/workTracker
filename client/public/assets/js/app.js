@@ -27,6 +27,12 @@ app.config(["$stateProvider", "$urlRouterProvider", function (stateProvider, url
             templateUrl: "client/views/user/registration.html",
             controller: "userController"
         })
+        .state("changePassword", {
+            url: "/dashboard/changePassword",
+            parent: "base",
+            templateUrl: "client/views/user/changePassword.html",
+            controller: "userController"
+        })
         .state("dashboard", {
             url: "/dashboard",
             templateUrl: "client/views/dashboard.html",
@@ -39,6 +45,7 @@ app.config(["$stateProvider", "$urlRouterProvider", function (stateProvider, url
             parent: "dashboard",
             controller: 'dashboardController'
         });
+       
 }]);
 
 app.controller("dashboardController", ["$scope", "$state", function (r, t) {

@@ -7,7 +7,7 @@
                     <img src=images/flat-avatar.png class=user-avatar><br> 
                     <p>Welcome</p><br/>
                     <p>{{user_prefix}}{{user_first_name}}</p>
-                    <a ui-sref=login class="btn btn-white btn-outline btn-rounded btn-sm">Logout</a> 
+                    <a ui-sref=login class="btn btn-white btn-outline btn-rounded">Logout</a>
                 </div> 
                 <ul class="nav nav-sidebar"> 
                     <li ng-class="{active: $state.includes('overview')}">
@@ -15,9 +15,9 @@
                     </li> 
                     <li ng-class="{active: $state.includes('reports')}">
                         <a ui-sref=reports>Reports</a>
-                    </li> 
+                    </li>
                     <li>
-                        <a href=http://www.strapui.com/ani-angularjs-theme>Ani Theme Premium Edition</a>
+                        <a ui-sref=changePassword>Change Password</a>
                     </li> 
                 </ul> 
             </div> 

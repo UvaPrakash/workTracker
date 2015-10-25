@@ -9,3 +9,9 @@ app.directive('registration', function() {
     templateUrl: 'client/views/user/partials/registrationPartial.html'
   };
 });
+
+app.directive('changepassword', function() {
+  return {
+    templateUrl: 'client/views/user/partials/changePasswordPartial.html'
+  };
+});
